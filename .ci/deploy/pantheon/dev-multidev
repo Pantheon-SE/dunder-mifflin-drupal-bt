@@ -15,8 +15,7 @@ terminus build:gitignore:cut
 terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
 
 # Fix any dubious ownership error.
-echo "github workspace: $GITHUB_WORKSPACE"
-# git config --global --add safe.directory 
+git config --global --add safe.directory $GITHUB_WORKSPACE
 
 if [[ "$CI_BRANCH" != "$DEFAULT_BRANCH" ]]
 then

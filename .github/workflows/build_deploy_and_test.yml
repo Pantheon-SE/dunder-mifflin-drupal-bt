@@ -273,11 +273,11 @@ jobs:
           source $BASH_ENV
           ./.ci/test/behat/initialize
 
-      - name: run acceptance tests with Behat
-        run: |
-          eval `ssh-agent -s`
-          ssh-add ../private.key
-          ./.ci/test/behat/run
+      # - name: run acceptance tests with Behat
+      #   run: |
+      #     eval `ssh-agent -s`
+      #     ssh-add ../private.key
+      #     ./.ci/test/behat/run
 
       # Uncomment line 13 in .ci/test/behat/cleanup to restore a backup
       # after running Behat tests. This is useful to reset the multidev
